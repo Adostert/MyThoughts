@@ -1,0 +1,10 @@
+<section class="postbox">
+    <h3>My Thoughts</h3>
+    <button ng-click="$ctrl.showForm();">New thought</button>
+    <section class="postholder">
+    <div ng-repeat="post in $ctrl.postsArray track by $index">
+        <post posts-array="post" remove-post="$ctrl.removePost($index)"></post>
+    </div>
+    <post-form on-submit="$ctrl.onSubmit(newPost)" form-toggle="$ctrl.formToggle" show-form="$ctrl.showForm()"></post-form>
+    </section>
+</section>
